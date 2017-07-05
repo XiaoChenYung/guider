@@ -8,5 +8,5 @@ import Admin from '../controller/admin/admin'
 const router = express.Router()
 
 router.post('/login', Admin.login);
-
+router.post('/singup', Admin.singup);
 export default router

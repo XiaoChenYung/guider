@@ -1,4 +1,5 @@
 import express from 'express';
+import db from './mongodb/db.js';
 import config from 'config-lite';
 import router from './routes/index.js';
 import cookieParser from 'cookie-parser'
@@ -7,7 +8,7 @@ import connectMongo from 'connect-mongo';
 import winston from 'winston';
 import expressWinston from 'express-winston';
 import history from 'connect-history-api-fallback';
-
+import path from 'path';
 const app = express();
 
 app.all('*', (req, res, next) => {
